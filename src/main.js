@@ -9,6 +9,10 @@ window.addEventListener('load', () => {
 
 		const task = input.value;
 
+		if (input.value === "") {
+			alert("Please add a todo");
+		} 
+
 		const task_el = document.createElement('div');
 		task_el.classList.add('task');
 
@@ -55,7 +59,7 @@ window.addEventListener('load', () => {
 				task_input_el.setAttribute("readonly", "readonly");
 			}
 		});
-
+	    
 		task_delete_el.addEventListener('click', (e) => {
 			list_el.removeChild(task_el);
 		});
